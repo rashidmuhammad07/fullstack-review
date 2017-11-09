@@ -12,7 +12,7 @@ let repoSchema = mongoose.Schema({
   id: Number,
   name: String,
   handle: String, 
-  url: mongoose.SchemaTypes.Url
+  url: String
 });
 
 let Repo = mongoose.model('Repo', repoSchema);
