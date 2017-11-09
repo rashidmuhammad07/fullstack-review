@@ -1,3 +1,4 @@
+import sampleData from '../../data.json';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
@@ -8,7 +9,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      repos: []
+      repos: props.repos
     }
 
   }
@@ -27,4 +28,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App repos={sampleData}/>, document.getElementById('app'));
